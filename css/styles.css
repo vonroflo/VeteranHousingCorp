@@ -1149,11 +1149,12 @@ p { margin: 0 0 1em; }
 .image-banner--400 { min-height: clamp(280px, 42vw, 400px); }
 .image-banner--480 { min-height: clamp(320px, 50vw, 480px); }
 
-/* ---------- Section with image background (impact stats variant) ---------- */
+/* ---------- Section with image background ---------- */
 .section-with-bg {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  background: transparent;
 }
 .section-with-bg__bg {
   position: absolute;
@@ -1173,17 +1174,6 @@ p { margin: 0 0 1em; }
 }
 .section-with-bg__overlay--navy-60 { background: rgba(15, 26, 69, 0.6); }
 .section-with-bg__overlay--navy-70 { background: rgba(15, 26, 69, 0.7); }
-
-/* When impact-stats has an image bg, switch to dark-on-light text */
-.impact-stats.section-with-bg {
-  background: transparent;
-  border-color: var(--color-gold);
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-}
-.impact-stats.section-with-bg .stat__label { color: var(--color-white); }
-.impact-stats.section-with-bg .stat__number { color: var(--color-gold-light); }
 
 /* ---------- Two-column media row (image + content) ---------- */
 .media-row {
