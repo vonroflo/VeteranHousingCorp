@@ -12,6 +12,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css">
+
+  <meta property="og:title" content="About — Veteran Housing Corp">
+  <meta property="og:description" content="Our mission is to provide safe, decent, and affordable housing to veterans. Learn about our approach, leadership, and the problem of veteran homelessness in Florida.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Veteran Housing Corp — No Veteran Should Sleep Without a Roof. 501(c)(3), Marion County, FL.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — Veteran Housing Corp">
+  <meta name="twitter:description" content="Our mission, our approach, and the problem of veteran homelessness in Florida.">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
 </head>
 <body>
 
@@ -60,9 +72,13 @@
 
   <main id="main">
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-      <div class="container">
+    <!-- PAGE HERO (image banner) -->
+    <section class="image-banner image-banner--480">
+      <picture class="image-banner__media">
+        <img src="/assets/about-hero.webp" alt="Veterans and caseworker reviewing housing documents together" width="2752" height="1536" fetchpriority="high" decoding="sync">
+      </picture>
+      <div class="image-banner__overlay image-banner__overlay--navy-50" aria-hidden="true"></div>
+      <div class="image-banner__content container">
         <div class="star-divider" aria-hidden="true">★ ★ ★ ★ ★</div>
         <h1>About Veteran Housing Corp</h1>
         <p>A 501(c)(3) nonprofit committed to ending veteran homelessness in Marion County, Florida — one veteran, one home, one future at a time.</p>
@@ -87,18 +103,28 @@
     <!-- THE PROBLEM -->
     <section class="section bg-off-white">
       <div class="container">
-        <h2>The Problem</h2>
-        <p>Veteran homelessness is a national disgrace and a local crisis. Many of those who served their country come home to find no place to call their own — and the path back to stability is steeper, lonelier, and harder than it ever should be.</p>
-        <div class="callout">On any given night in Florida, over 2,000 veterans are without a home.</div>
-        <p>Marion County, Florida — and the surrounding communities we serve — are not exempt. Behind every statistic is a person: a sailor, a soldier, an airman, a marine. Each deserves better. Each deserves a door of their own.</p>
+        <div class="media-row">
+          <div>
+            <h2>The Problem</h2>
+            <p>Veteran homelessness is a national disgrace and a local crisis. Many of those who served their country come home to find no place to call their own — and the path back to stability is steeper, lonelier, and harder than it ever should be.</p>
+            <div class="callout">On any given night in Florida, over 2,000 veterans are without a home.</div>
+            <p>Marion County, Florida — and the surrounding communities we serve — are not exempt. Behind every statistic is a person: a sailor, a soldier, an airman, a marine. Each deserves better. Each deserves a door of their own.</p>
+          </div>
+          <img class="media-row__media media-row__media--360" src="/assets/about-street.webp" alt="Veteran sitting alone at dusk in a Florida city" width="2752" height="1536" loading="lazy" decoding="async">
+        </div>
       </div>
     </section>
 
     <!-- OUR APPROACH -->
     <section class="section bg-white">
       <div class="container">
-        <h2 class="text-center">Our Approach</h2>
-        <p class="text-center" style="max-width: 60ch; margin: 0 auto 1rem;">A collaborative, evidence-based model built around three pillars. We partner directly with the VA, Marion County, and trusted local nonprofits to wrap each veteran in the support they need.</p>
+        <div class="media-row">
+          <img class="media-row__media media-row__media--360" src="/assets/about-approach.webp" alt="Two veterans walking together through a Florida neighborhood" width="2752" height="1536" loading="lazy" decoding="async">
+          <div>
+            <h2>Our Approach</h2>
+            <p>A collaborative, evidence-based model. We partner directly with the VA, Marion County, and trusted local nonprofits to wrap each veteran in the support they need.</p>
+          </div>
+        </div>
         <div class="three-pillars">
           <div class="pillar">
             <h3>Housing First</h3>

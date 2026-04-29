@@ -24,3 +24,7 @@ npm-debug.log*
 
 # Node (in case anyone adds tooling later)
 node_modules/
+
+# Source PNGs — kept locally, only their WebP outputs are committed.
+# Re-run scripts/convert-images.py to regenerate WebPs from PNGs.
+assets/*.png
