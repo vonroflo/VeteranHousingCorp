@@ -501,19 +501,22 @@ p { margin: 0 0 1em; }
 }
 .service-card__link:hover { color: var(--color-gold); }
 
-/* AMI band */
+/* AMI band — sixth tile in the service grid */
 .ami-band {
   background: var(--color-red);
   color: var(--color-white);
   text-align: center;
-  padding: 1.5rem 1rem;
-  margin-top: 3rem;
+  padding: 1.75rem 1.5rem;
   border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.ami-band p { margin: 0; font-weight: 600; font-size: 1.0625rem; letter-spacing: 0.02em; }
+.ami-band p { margin: 0; font-weight: 600; font-size: 1rem; letter-spacing: 0.02em; line-height: 1.4; }
 .ami-band strong {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.625rem;
   color: var(--color-gold-light);
   font-family: var(--font-display);
   font-size: 1.5rem;
