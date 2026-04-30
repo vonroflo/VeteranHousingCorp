@@ -174,8 +174,18 @@ p { margin: 0 0 1em; }
   outline: 3px solid var(--color-navy-dark);
 }
 :focus-visible {
-  outline: 3px solid var(--color-gold);
+  outline: 3px solid var(--color-red);
   outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Red ring is invisible on red backgrounds — switch to white there */
+.bg-red *:focus-visible,
+.btn-red:focus-visible,
+.cta-banner *:focus-visible,
+.tagline-strip *:focus-visible,
+.mobile-help-bar:focus-visible,
+.ami-band *:focus-visible {
+  outline-color: var(--color-white);
 }
 
 /* ---------- Header ---------- */
@@ -461,8 +471,8 @@ p { margin: 0 0 1em; }
   background: var(--color-navy-dark);
   color: var(--color-white);
 }
-.services h2 { text-align: center; margin-bottom: 1rem; }
-.services__intro { text-align: center; color: rgba(255,255,255,0.8); max-width: 60ch; margin: 0 auto 3rem; }
+.services h2 { text-align: center; margin-bottom: 1rem; color: var(--color-white); }
+.services__intro { text-align: center; color: rgba(255,255,255,0.85); max-width: 60ch; margin: 0 auto 3rem; }
 
 .service-grid {
   display: grid;
@@ -694,8 +704,8 @@ p { margin: 0 0 1em; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(201,147,58,0.4);
@@ -940,7 +950,7 @@ p { margin: 0 0 1em; }
   width: 100%;
   font: inherit;
   padding: 0.75rem 0.875rem;
-  border: 2px solid rgba(15, 26, 69, 0.15);
+  border: 2px solid rgba(15, 26, 69, 0.4);
   border-radius: var(--radius);
   background: var(--color-white);
   color: var(--color-text-body);
