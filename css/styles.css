@@ -619,7 +619,7 @@ p { margin: 0 0 1em; }
 @media (min-width: 768px) {
   .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
 }
-.footer-brand img { height: 88px; margin-bottom: 1rem; background: var(--color-white); padding: 0.5rem; border-radius: var(--radius); }
+.footer-brand img { height: 88px; width: auto; margin-bottom: 1rem; background: var(--color-white); padding: 0.5rem; border-radius: var(--radius); }
 .footer-brand p { color: rgba(255,255,255,0.85); max-width: 32ch; }
 
 .footer-section h4 {
