@@ -751,9 +751,6 @@ p { margin: 0 0 1em; }
   max-width: 60ch;
   margin: 0 auto;
   line-height: 1.4;
-  padding-left: 1rem;
-  border-left: 4px solid var(--color-gold);
-  text-align: left;
 }
 
 .three-pillars {
