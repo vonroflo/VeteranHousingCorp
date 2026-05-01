@@ -664,14 +664,6 @@ p { margin: 0 0 1em; }
   max-width: 80px;
 }
 
-.footer-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: 1.5rem 0 1.5rem;
-}
-
 .socials {
   display: flex;
   gap: 0.75rem;
@@ -700,37 +692,6 @@ p { margin: 0 0 1em; }
   border-top: 1px solid rgba(201,147,58,0.25);
 }
 
-/* ---------- Badges ---------- */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.875rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border: 1px solid var(--color-gold);
-  white-space: nowrap;
-}
-.badge--veteran-led {
-  background: var(--color-red);
-  color: var(--color-white);
-  border-color: var(--color-gold);
-}
-.badge--nonprofit {
-  background: var(--color-white);
-  color: var(--color-navy-dark);
-  border-color: var(--color-gold);
-}
-.badge--paypal {
-  background: var(--color-white);
-  color: #003087;
-  border-color: var(--color-gold);
-}
-.badge svg { width: 14px; height: 14px; }
-
 /* ---------- About page ---------- */
 .page-hero {
   background: var(--color-navy-dark);
@@ -740,7 +701,6 @@ p { margin: 0 0 1em; }
 }
 .page-hero h1 { color: var(--color-white); }
 .page-hero p { color: rgba(255,255,255,0.85); max-width: 60ch; margin: 0 auto; }
-.page-hero .footer-badges { margin-top: 2rem; }
 
 .mission-quote {
   font-family: var(--font-display);
