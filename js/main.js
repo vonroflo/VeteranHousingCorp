@@ -195,8 +195,13 @@
       '</button>',
       '<div class="chatbot__panel" id="chatbot-panel" role="dialog" aria-labelledby="chatbot-title" aria-modal="false">',
       '<div class="chatbot__header">',
+      '<div class="chatbot__title-block">',
       '<strong id="chatbot-title">VHC Helper</strong>',
       '<span>Quick answers · 24/7</span>',
+      '</div>',
+      '<button class="chatbot__close" type="button" aria-label="Close chat helper">',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>',
+      '</button>',
       '</div>',
       '<div class="chatbot__crisis-banner" role="note">',
       '<strong>In crisis?</strong> Call <a href="tel:988">988</a>, press <strong>1</strong>.',
@@ -209,8 +214,19 @@
 
     const toggle = root.querySelector('.chatbot__toggle');
     const panel = root.querySelector('.chatbot__panel');
+    const closeBtn = root.querySelector('.chatbot__close');
     const messages = root.querySelector('.chatbot__messages');
     const quickReplies = root.querySelector('.chatbot__quick-replies');
+
+    // Track the actual rendered header height so the small-viewport panel
+    // sheet can sit just below it (CSS variable consumed in styles.css).
+    function updateHeaderOffset() {
+      const headerEl = document.querySelector('.site-header');
+      if (!headerEl) return;
+      document.documentElement.style.setProperty('--header-actual', headerEl.offsetHeight + 'px');
+    }
+    updateHeaderOffset();
+    window.addEventListener('resize', updateHeaderOffset, { passive: true });
 
     function addMessage(text, role) {
       const el = document.createElement('div');
@@ -273,6 +289,7 @@
       const isOpen = root.getAttribute('aria-expanded') === 'true';
       isOpen ? close() : open();
     });
+    closeBtn.addEventListener('click', close);
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && root.getAttribute('aria-expanded') === 'true') close();
     });

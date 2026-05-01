@@ -1261,11 +1261,14 @@ p { margin: 0 0 1em; }
   }
 }
 
-/* Very small viewports — slide up as a near-full-width sheet */
+/* Very small viewports — slide up as a near-full-width sheet.
+   --header-actual is set in JS from site-header.offsetHeight so the panel
+   sits below whatever the header actually renders as (the new logo makes
+   it taller than the CSS min-height suggests). */
 @media (max-width: 480px) {
   .chatbot[aria-expanded="true"] .chatbot__panel {
     position: fixed;
-    inset: max(64px, env(safe-area-inset-top)) 8px calc(80px + env(safe-area-inset-bottom)) 8px;
+    inset: calc(var(--header-actual, 96px) + 12px) 8px calc(80px + env(safe-area-inset-bottom)) 8px;
     width: auto;
     max-width: none;
     height: auto;
@@ -1276,10 +1279,15 @@ p { margin: 0 0 1em; }
 .chatbot__header {
   background: var(--color-navy-dark);
   color: var(--color-white);
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 0.75rem 0.875rem 1.25rem;
   border-bottom: 2px solid var(--color-gold);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
+.chatbot__title-block { min-width: 0; }
 .chatbot__header strong {
   display: block;
   font-family: var(--font-display);
@@ -1294,6 +1302,23 @@ p { margin: 0 0 1em; }
   color: var(--color-gold-light);
   margin-top: 2px;
 }
+.chatbot__close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: var(--color-white);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  flex-shrink: 0;
+}
+.chatbot__close:hover { background: rgba(255,255,255,0.15); }
+.chatbot__close:focus-visible { outline-color: var(--color-white); }
+.chatbot__close svg { width: 20px; height: 20px; }
 
 .chatbot__crisis-banner {
   background: rgba(200, 16, 46, 0.1);
