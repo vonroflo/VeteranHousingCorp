@@ -215,6 +215,7 @@ p { margin: 0 0 1em; }
   gap: 0.875rem;
   text-decoration: none;
   flex-shrink: 0;
+  padding-left: 0.5rem;
 }
 .brand img {
   height: 72px;
@@ -302,7 +303,6 @@ p { margin: 0 0 1em; }
 .mobile-menu a[aria-current="page"] {
   color: var(--color-gold-light);
 }
-.mobile-menu .btn { margin-top: 1rem; width: 100%; }
 
 /* Mobile sticky GET HELP NOW bar */
 .mobile-help-bar {
